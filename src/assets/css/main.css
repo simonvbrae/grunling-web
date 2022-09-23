@@ -1,0 +1,25 @@
+.text {
+  font-family: Calibri, sans-serif;
+  color: white;
+}
+
+.blockText {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* prevent every type of horizontal scroll  */
+/* overflow-x: hidden; will stop element from scrolling.*/
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+  overflow-x: hidden;
+  width: 100%
+}
+
+/**/
+.blockURL:hover,
+.blockURL {
+  color: rgb(217, 217, 217)
+}
