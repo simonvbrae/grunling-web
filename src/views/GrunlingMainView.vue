@@ -29,28 +29,27 @@
 
       <img
         v-if="language == 'dutch'"
-        class="imag"
+        class="image"
         src="@/assets/images/1.png"
       />
-      <img v-else class="imag" src="@/assets/images/1-english.png" />
+      <img v-else class="image" src="@/assets/images/1-english-new.png" />
       <br />
       <br />
       <br />
       <img
         v-if="language == 'dutch'"
-        class="imag"
+        class="image"
         src="@/assets/images/2.png"
       />
-      <img v-else class="imag" src="@/assets/images/2-english.png" />
-      <br />
-      <br />
-      <br />
+      <img v-else class="image" src="@/assets/images/2-english-new.png" />
+      <br v-if="language == 'dutch'" />
+      <br v-if="language == 'dutch'" />
+      <br v-if="language == 'dutch'" />
       <img
         v-if="language == 'dutch'"
-        class="imag"
+        class="image"
         src="@/assets/images/3.png"
       />
-      <img v-else class="imag" src="@/assets/images/3-english.png" />
       <br />
     </div>
 
@@ -160,7 +159,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.imag {
+.image {
   max-width: 80vw;
 }
 .brochure_image {
