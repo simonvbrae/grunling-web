@@ -26,6 +26,11 @@ body {
 }
 
 /* Fonts */
+.slogan {
+  font-family: 'COINAGE_CAPS_ERIC_GILL_W0';
+  src: local('COINAGE_CAPS_ERIC_GILL_W0'), url(./fonts/Coinage_Caps_Eric_Gill_W01_Rg.ttf) format('ttf');
+}
+
 /* Menu item styling (box) */
 
 /* Logo & title component */

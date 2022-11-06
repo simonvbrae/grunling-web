@@ -1,3 +1,8 @@
 <template>
-  <div class="contentDiv"><img src="@/assets/images/topleft.png" /></div>
+  <div class="contentDiv">
+    <!-- TODO Create two column layout -->
+    <div><p class="slogan">A HOUSE WITH IMPACT</p></div>
+    <div></div>
+    <!-- <img src="@/assets/images/topleft.png" /> -->
+  </div>
 </template>
