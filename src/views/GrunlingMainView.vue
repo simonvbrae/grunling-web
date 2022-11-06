@@ -30,7 +30,7 @@
       <img
         v-if="language == 'dutch'"
         class="image"
-        src="@/assets/images/1.png"
+        src="@/assets/images/1-dutch-new.png"
       />
       <img v-else class="image" src="@/assets/images/1-english-new.png" />
       <br />
@@ -39,17 +39,9 @@
       <img
         v-if="language == 'dutch'"
         class="image"
-        src="@/assets/images/2.png"
+        src="@/assets/images/2-dutch-new.png"
       />
       <img v-else class="image" src="@/assets/images/2-english-new.png" />
-      <br v-if="language == 'dutch'" />
-      <br v-if="language == 'dutch'" />
-      <br v-if="language == 'dutch'" />
-      <img
-        v-if="language == 'dutch'"
-        class="image"
-        src="@/assets/images/3.png"
-      />
       <br />
     </div>
 
@@ -66,12 +58,22 @@
             style="text-decoration: none"
           >
             <v-btn
+              v-if="language == 'dutch'"
               class="text-center"
               rounded
               color="primary"
               style="text-decoration: none; color: black"
             >
               Statuten
+            </v-btn>
+            <v-btn
+              v-else
+              class="text-center"
+              rounded
+              color="primary"
+              style="text-decoration: none; color: black"
+            >
+              By-laws
             </v-btn>
           </a>
         </v-col>
