@@ -30,18 +30,72 @@
       <img
         v-if="language == 'dutch'"
         class="image"
-        src="@/assets/images/1-dutch-new.png"
+        src="@/assets/images/1.png"
       />
-      <img v-else class="image" src="@/assets/images/1-english-new.png" />
+      <img v-else class="image" src="@/assets/images/1.png" />
       <br />
       <br />
       <br />
       <img
         v-if="language == 'dutch'"
         class="image"
-        src="@/assets/images/2-dutch-new.png"
+        src="@/assets/images/2.png"
       />
-      <img v-else class="image" src="@/assets/images/2-english-new.png" />
+      <img v-else class="image" src="@/assets/images/2.png" />
+      <br />
+      <br />
+      <br />
+      <img
+        v-if="language == 'dutch'"
+        class="image"
+        src="@/assets/images/3.png"
+      />
+      <img v-else class="image" src="@/assets/images/3.png" />
+      <br />
+      <br />
+      <br />
+      <img
+        v-if="language == 'dutch'"
+        class="image"
+        src="@/assets/images/4.png"
+      />
+      <img v-else class="image" src="@/assets/images/4.png" />
+      <br />
+      <br />
+      <br />
+      <img
+        v-if="language == 'dutch'"
+        class="image"
+        src="@/assets/images/5.png"
+      />
+      <img v-else class="image" src="@/assets/images/5.png" />
+      <br />
+      <br />
+      <br />
+      <img
+        v-if="language == 'dutch'"
+        class="image"
+        src="@/assets/images/6.png"
+      />
+      <img v-else class="image" src="@/assets/images/6.png" />
+      <br />
+      <br />
+      <br />
+      <img
+        v-if="language == 'dutch'"
+        class="image"
+        src="@/assets/images/7.png"
+      />
+      <img v-else class="image" src="@/assets/images/7.png" />
+      <br />
+      <br />
+      <br />
+      <img
+        v-if="language == 'dutch'"
+        class="image"
+        src="@/assets/images/8.png"
+      />
+      <img v-else class="image" src="@/assets/images/8.png" />
       <br />
     </div>
 
