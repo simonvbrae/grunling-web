@@ -12,6 +12,7 @@
 html {
   overflow-x: hidden;
   width: 100%;
+  background-color: rgba(232,230,230,255); /* BG COLOR */
 }
 body {
   overflow-x: hidden;
@@ -23,3 +24,8 @@ body {
 .blockURL {
   color: rgb(217, 217, 217)
 }
+
+/* Fonts */
+/* Menu item styling (box) */
+
+/* Logo & title component */

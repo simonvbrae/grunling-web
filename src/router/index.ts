@@ -8,9 +8,9 @@ const routes: Array<RouteConfig> = [
     path: "/",
     name: "home",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/GrunlingMainView.vue"),
+      import(/* webpackChunkName: "about" */ "../views/HomeView.vue"),
   },
-  // {
+  // {Home
   //   path: "/vacancy/",
   //   name: "vacancy",
   //   component: () =>
