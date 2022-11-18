@@ -40,26 +40,24 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-br {
-  display: block;
-  margin: 0px;
-}
 .roomImg {
-  width: 100%;
+  width: 100%; /*TODO image border right side*/
   height: 100%;
 }
 
 .slogan {
+  line-height: 120%;
   font-family: "Coinage Caps Eric Gill W01";
   font-size: 530%;
   color: black;
 }
 
 .subSlogan {
-  font-family: "MS Sans";
+  font-family: "DM Sans";
   text-align: left;
   font-weight: bold;
   font-size: 160%;
+  margin-top: 3%;
 }
 
 .sloganBox {
@@ -69,13 +67,17 @@ br {
 }
 
 .box {
-  font-family: "MS Sans";
+  font-family: "DM Sans";
   font-weight: bold;
   text-transform: none !important;
   font-size: 120%;
   margin-bottom: 3%;
-  margin-right: 3%;
+  margin-right: 10%;
   padding: 10px;
   /*TODO naming*/
+}
+
+.buttonBox {
+  margin-top: 10%;
 }
 </style>
