@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="pageWrapper">
     <div class="layoutColumn">
       <p>A HOUSE WITH IMPACT</p>
       <p>Connecting impact-driven entrepreneurs</p>
@@ -30,17 +30,12 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.wrapper {
+.pageWrapper {
   display: flex;
   flex-direction: row;
 }
 .layoutColumn {
+  height: 100%;
   flex: 1;
-}
-.borderButton {
-  text-decoration: none;
-  color: black;
-  border: 10px;
-  border-color: black;
 }
 </style>
