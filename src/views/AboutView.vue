@@ -14,7 +14,9 @@
         </div>
       </div>
     </div>
-    <div class="contentColumn">Foto komt hier hihi</div>
+    <div class="contentColumn">
+      <img src="@/assets/images/room.png" />
+    </div>
   </div>
 </template>
 

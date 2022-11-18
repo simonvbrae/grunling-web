@@ -21,6 +21,10 @@ export default Vue.extend({
 </script>
 
 <style>
+#app {
+  background-color: rgb(232, 230, 230);
+}
+
 .root {
   width: 100%;
   height: 100%;
@@ -29,6 +33,8 @@ export default Vue.extend({
 .wrapper {
   width: 100vw;
   height: 100vh;
+  max-width: 1500px;
+  margin: auto;
   background-color: rgb(232, 230, 230);
   display: flex;
   flex-direction: column;
