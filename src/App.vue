@@ -22,7 +22,7 @@ export default Vue.extend({
 
 <style>
 #app {
-  background-color: rgb(232, 230, 230);
+  background-color: rgb(0, 0, 0);
 }
 
 .root {
