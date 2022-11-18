@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="root">
     <div class="wrapper">
-      <div class="header"><MenuBar></MenuBar></div>
+      <MenuBar></MenuBar>
       <div class="body">
         <router-view />
       </div>
@@ -21,10 +21,15 @@ export default Vue.extend({
 </script>
 
 <style>
+.root {
+  width: 100%;
+  height: 100%;
+}
+
 .wrapper {
   width: 100vw;
   height: 100vh;
-  background-color: #42b983;
+  background-color: rgb(232, 230, 230);
   display: flex;
   flex-direction: column;
 }
@@ -35,11 +40,6 @@ export default Vue.extend({
 
 .footer {
   background-color: bisque;
-}
-
-.root {
-  width: 100%;
-  height: 100%;
 }
 
 #app {

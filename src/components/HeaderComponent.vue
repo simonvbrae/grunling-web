@@ -1,7 +1,5 @@
 <template>
-  <div
-    style="background-color: aqua; text-align: left; /* TODO fit to content */"
-  >
+  <div class="headerBar">
     <v-container>
       <v-row
         ><v-col><LogoComponent></LogoComponent></v-col><v-col>About</v-col
@@ -21,3 +19,12 @@ export default Vue.extend({
   components: { LogoComponent },
 });
 </script>
+<style scoped>
+.headerBar {
+  background-color: aqua;
+  display: block;
+  block-size: fit-content;
+  width: 100%;
+  height: fit-content;
+}
+</style>

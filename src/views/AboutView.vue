@@ -1,6 +1,6 @@
 <template>
-  <div class="pageWrapper">
-    <div class="layoutColumn">
+  <div class="contentWrapper">
+    <div class="contentColumn">
       <p>A HOUSE WITH IMPACT</p>
       <p>Connecting impact-driven entrepreneurs</p>
       <div class="buttonBox">
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <div class="layoutColumn">Foto komt hier hihi</div>
+    <div class="contentColumn">Foto komt hier hihi</div>
   </div>
 </template>
 
@@ -29,13 +29,4 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped>
-.pageWrapper {
-  display: flex;
-  flex-direction: row;
-}
-.layoutColumn {
-  height: 100%;
-  flex: 1;
-}
-</style>
+<style scoped></style>

@@ -25,8 +25,28 @@ body {
   color: rgb(217, 217, 217)
 }
 
+/* Page Layout */
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentColumn {
+  height: 100%;
+  flex: 1;
+}
+
 /* Fonts */
-.slogan {
+@font-face {
+  font-family: "Coinage Caps Eric Gill W01";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: local("Coinage Caps Eric Gill W01"), url("../../../public/fonts/Coinage_Caps_Eric_Gill_W01_Rg.woff") format("woff"); /*TODO add another option: url("/fonts/Coinage_Caps_Eric_Gill_W01_Rg.woff2") format("woff2") https://www.onlinewebfonts.com/download/543c2d773210d2f5ff029678aa698ac7*/
+}
+
+/* .slogan {
   font-family: 'COINAGE_CAPS_ERIC_GILL_W0';
   src: local('COINAGE_CAPS_ERIC_GILL_W0'), url(./fonts/Coinage_Caps_Eric_Gill_W01_Rg.ttf) format('ttf');
-}
+} */

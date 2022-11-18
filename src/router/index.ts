@@ -12,9 +12,15 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/about",
-    name: "home",
+    name: "about",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/aboutTest",
+    name: "aboutTest",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/CompareAbout.vue"),
   },
   {
     path: "/",
