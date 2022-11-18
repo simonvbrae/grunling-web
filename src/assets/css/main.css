@@ -30,14 +30,3 @@ body {
   font-family: 'COINAGE_CAPS_ERIC_GILL_W0';
   src: local('COINAGE_CAPS_ERIC_GILL_W0'), url(./fonts/Coinage_Caps_Eric_Gill_W01_Rg.ttf) format('ttf');
 }
-
-/* Menu item styling (box) */
-.borderButton{
-  text-decoration: none; 
-  color: black;
-  border: 10px;
-  border-color: black;
-}
-
-
-/* Logo & title component */

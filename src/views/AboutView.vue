@@ -1,58 +1,20 @@
 <template>
-  <div>
-    <p>A HOUSE WITH IMPACT</p>
-    <p>Connecting impact-driven entrepreneurs</p>
-    <div>
-      <v-btn
-        class="text-center borderButton"
-        style="
-          border-width: 100px;
-          background-color: ;
-          text-decoration: none;
-          color: black;
-          border-color: black;
-        "
-      >
-        Co-working
-      </v-btn>
-      <v-btn
-        class="text-center borderButton"
-        style="
-          border-width: 100px;
-          background-color: ;
-          text-decoration: none;
-          color: black;
-          border-color: black;
-        "
-      >
-        Meeting rooms
-      </v-btn>
-      <v-btn
-        class="text-center borderButton"
-        style="
-          border-width: 100px;
-          background-color: ;
-          text-decoration: none;
-          color: black;
-          border-color: black;
-        "
-      >
-        Offices
-      </v-btn>
-      <v-btn
-        class="text-center borderButton"
-        style="
-          border-width: 100px;
-          background-color: ;
-          text-decoration: none;
-          color: black;
-          border-color: black;
-        "
-      >
-        Commercial spaces
-      </v-btn>
+  <div class="wrapper">
+    <div class="layoutColumn">
+      <p>A HOUSE WITH IMPACT</p>
+      <p>Connecting impact-driven entrepreneurs</p>
+      <div class="buttonBox">
+        <div class="buttonRow">
+          <v-btn class="text-center" outlined> Co-working </v-btn>
+          <v-btn class="text-center" outlined> Meeting rooms </v-btn>
+        </div>
+        <div class="buttonRow">
+          <v-btn class="text-center" outlined> Offices </v-btn>
+          <v-btn class="text-center" outlined> Commercial spaces </v-btn>
+        </div>
+      </div>
     </div>
-    <div>Foto komt hier hihi</div>
+    <div class="layoutColumn">Foto komt hier hihi</div>
   </div>
 </template>
 
@@ -68,6 +30,13 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.layoutColumn {
+  flex: 1;
+}
 .borderButton {
   text-decoration: none;
   color: black;
