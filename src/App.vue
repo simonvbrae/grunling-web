@@ -1,7 +1,12 @@
 <template>
-  <div id="app">
-    <MenuBar></MenuBar>
-    <router-view />
+  <div id="app" class="root">
+    <div class="wrapper">
+      <div class="header"><MenuBar></MenuBar></div>
+      <div class="body">
+        <router-view />
+      </div>
+      <div class="footer">Footer</div>
+    </div>
   </div>
 </template>
 
@@ -16,6 +21,27 @@ export default Vue.extend({
 </script>
 
 <style>
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #42b983;
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  flex: 1;
+}
+
+.footer {
+  background-color: bisque;
+}
+
+.root {
+  width: 100%;
+  height: 100%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
