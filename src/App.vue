@@ -1,8 +1,19 @@
 <template>
   <div id="app">
+    <MenuBar></MenuBar>
     <router-view />
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+import MenuBar from "./components/HeaderComponent.vue";
+
+export default Vue.extend({
+  name: "App",
+  components: { MenuBar },
+});
+</script>
 
 <style>
 #app {

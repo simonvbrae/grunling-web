@@ -32,5 +32,12 @@ body {
 }
 
 /* Menu item styling (box) */
+.borderButton{
+  text-decoration: none; 
+  color: black;
+  border: 10px;
+  border-color: black;
+}
+
 
 /* Logo & title component */
