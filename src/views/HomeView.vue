@@ -41,7 +41,9 @@ export default Vue.extend({
 
 <style scoped>
 .roomImg {
-  width: 100%; /*TODO image border right side*/
+  display: flex;
+  justify-self: left;
+  width: 98%; /*TODO image border right side*/
   height: 100%;
 }
 
