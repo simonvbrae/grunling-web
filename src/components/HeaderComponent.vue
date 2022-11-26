@@ -9,11 +9,10 @@
         >
           <LogoComponent style="width: 16.5vw" />
         </v-col>
-        <v-col cols="1" class="idk"> About </v-col>
-        <v-col cols="1" class="idk"> Offer </v-col>
-        <v-col cols="1" class="idk"> Invest </v-col>
-        <v-col cols="1" class="idk"> Contact </v-col>
-        <!-- <v-col cols="1" class="idk"> <v-btn>btn</v-btn> </v-col> -->
+        <v-col cols="1" class="menuItem"> About </v-col>
+        <v-col cols="1" class="menuItem"> Offer </v-col>
+        <v-col cols="1" class="menuItem"> Invest </v-col>
+        <v-col cols="1" class="menuItem"> Contact </v-col>
       </v-row>
     </v-container>
   </div>
@@ -36,10 +35,13 @@ export default Vue.extend({
   height: 19vh;
 }
 
-.idk {
+.menuItem {
   font-family: "DM Sans";
   font-weight: bold;
+  color: black;
   font-size: 20px;
+  letter-spacing: 3px;
+
   margin: auto;
   margin-right: 2%;
   align-items: center;

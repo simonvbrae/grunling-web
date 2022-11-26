@@ -49,6 +49,7 @@ export default Vue.extend({
   line-height: 120%;
   font-family: "Coinage Caps Eric Gill W01";
   font-size: 530%;
+  letter-spacing: 1000px;
   color: black;
 }
 

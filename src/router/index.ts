@@ -17,34 +17,28 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/",
-    name: "home",
+    path: "/contact",
+    name: "contact",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ContactView.vue"),
   },
   {
-    path: "/",
-    name: "home",
+    path: "/invest",
+    name: "invest",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/InvestView.vue"),
   },
   {
-    path: "/",
-    name: "home",
+    path: "/offer",
+    name: "offer",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/OfferView.vue"),
   },
-  // {Home
-  //   path: "/vacancy/",
-  //   name: "vacancy",
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ "../views/GrunlingMainView.vue"),
-  // },
   {
     path: "*",
     name: "catchAll",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/GrunlingMainView.vue"),
+      import(/* webpackChunkName: "about" */ "../views/HomeView.vue"),
   },
 ];
 
