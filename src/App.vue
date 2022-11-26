@@ -5,7 +5,6 @@
       <div class="body">
         <router-view />
       </div>
-      <div class="footer">Footer</div>
     </div>
   </div>
 </template>

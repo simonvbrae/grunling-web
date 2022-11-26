@@ -32,6 +32,7 @@ body {
 }
 
 .contentColumn {
+  display: flex;
   height: 100%;
   flex: 1;
 }
@@ -49,8 +50,23 @@ body {
 @font-face {
   font-family: "DM Sans";
   font-weight: 400;
-  font-style: normal;
+  font-style:normal;
   font-display: auto;
   unicode-range: U+000-5FF;
-  src: local("DM Sans"), url("../../../public/fonts/DM_Sans/DMSans-Bold.ttf") format("truetype"); /*TODO add another option: url("/fonts/Coinage_Caps_Eric_Gill_W01_Rg.woff2") format("woff2") https://www.onlinewebfonts.com/download/543c2d773210d2f5ff029678aa698ac7*/
+  src: local("DM Sans"), url("../../../public/fonts/DM_Sans/DMSans-Regular.ttf") format("truetype"); /*TODO add another option: url("/fonts/Coinage_Caps_Eric_Gill_W01_Rg.woff2") format("woff2") https://www.onlinewebfonts.com/download/543c2d773210d2f5ff029678aa698ac7*/
+}
+
+/* TEXT */
+.sectionTitle {
+  font-family: Coinage Caps Eric Gill W01;
+  font-size: 135%;
+  /* font-weight: bold; */
+  color: black;
+  letter-spacing: 2px;
+}
+.sectionContent {
+  font-family: "DM Sans";
+  font-size: 102%;
+  color: black;
+  letter-spacing: 2.5px;
 }

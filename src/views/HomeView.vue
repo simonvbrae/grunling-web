@@ -60,10 +60,10 @@ export default Vue.extend({
   text-align: left;
   font-weight: bold;
   font-size: 120%;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   color: black;
 
-  margin-top: 3%;
+  margin-top: 4%;
 }
 
 .sloganBox {
