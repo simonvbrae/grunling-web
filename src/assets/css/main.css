@@ -10,7 +10,7 @@
 /* prevent every type of horizontal scroll  */
 /* overflow-x: hidden; will stop element from scrolling.*/
 html {
-  overflow-x: hidden;
+  overflow: auto;
   width: 100%;
   background-color: rgba(232,230,230,255); /* BG COLOR */
 }

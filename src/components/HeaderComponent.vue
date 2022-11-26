@@ -7,7 +7,7 @@
           align-self="start"
           style="margin-right: 1%; margin-top: 1.2%"
         >
-          <LogoComponent style="width: 16.5vw" />
+          <LogoComponent style="width: 16.5vw; min-width: 180px" />
         </v-col>
         <v-col cols="1" class="menuItem"> About </v-col>
         <v-col cols="1" class="menuItem"> Offer </v-col>
@@ -43,7 +43,9 @@ export default Vue.extend({
   letter-spacing: 3px;
 
   margin: auto;
-  margin-right: 2%;
   align-items: center;
+
+  min-width: 10%;
+  margin-right: 2%;
 }
 </style>
