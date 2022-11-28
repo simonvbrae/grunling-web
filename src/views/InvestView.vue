@@ -1,7 +1,10 @@
 <template>
-  <div class="contentWrapper">
+  <div class="contentWrapper" :class="{ contentWrapperSmall: phone }">
     <div class="contentColumn CC-55">
-      <img class="grunlingImage" src="@/assets/images/grunling2.png" />
+      <img
+        :class="{ grunlingImage: !phone, grunlingImagePhone: phone }"
+        src="@/assets/images/grunling2.png"
+      />
     </div>
     <div class="contentColumn CC-45">
       <div class="sloganBox" style="max-width: 65%">
@@ -14,7 +17,12 @@
           knowledge and savings and join in our investment.
         </p>
 
-        <p class="sectionTitle" style="margin-top: 40%">INTERESTED?</p>
+        <p
+          class="sectionTitle sectionMargin"
+          :class="{ sectionMargin: !phone, sectionMarginPhone: phone }"
+        >
+          INTERESTED?
+        </p>
         <div class="imageTextBox">
           <img class="tomImage" src="@/assets/images/tom.png" />
           <div style="margin-left: 5%">
@@ -38,8 +46,23 @@ import Vue from "vue";
 export default Vue.extend({
   name: "AboutView",
   components: {},
-  computed: {},
-  methods: {},
+  data() {
+    return {
+      windowWidth: 0,
+    };
+  },
+  computed: {
+    phone() {
+      return this.$data.windowWidth < 650;
+    },
+  },
+  mounted() {
+    this.$data.windowWidth = window.innerWidth;
+
+    window.addEventListener("resize", () => {
+      this.$data.windowWidth = window.innerWidth;
+    });
+  },
 });
 </script>
 
@@ -49,6 +72,12 @@ export default Vue.extend({
   margin-left: 7%;
   display: flex;
   justify-self: left;
+  width: 90%;
+  height: 100%;
+}
+.grunlingImagePhone {
+  display: flex;
+  margin: auto;
   width: 90%;
   height: 100%;
 }
@@ -68,24 +97,10 @@ export default Vue.extend({
 }
 
 .sloganBox {
+  /* TODO remove? */
   text-align: left;
   margin-left: 8.5%;
   margin-top: 5.5%;
-}
-
-.box {
-  font-family: "DM Sans";
-  font-weight: bold;
-  text-transform: none !important;
-  font-size: 120%;
-  margin-bottom: 3%;
-  margin-right: 10%;
-  padding: 10px;
-  /*TODO naming*/
-}
-
-.buttonBox {
-  margin-top: 10%;
 }
 
 .CC-55 {
@@ -98,12 +113,15 @@ export default Vue.extend({
   color: red;
 }
 
-.alignLeft {
-  text-align: left;
-}
-
 .imageTextBox {
   margin-top: 2%;
   display: flex;
+}
+
+.sectionMargin {
+  margin-top: 40%;
+}
+.sectionMarginPhone {
+  margin-top: 20%;
 }
 </style>

@@ -2,8 +2,8 @@
   <div
     :class="{
       contentWrapper: !phone,
-      contentWrapperSmall: phone,
       marginLeft: !phone,
+      contentWrapperSmall: phone,
     }"
     style="padding-top: 6vh"
   >
@@ -16,8 +16,8 @@
     <div
       class="contentColumn CC-2-Thirds"
       :class="{
-        contentColumnSmall: phone,
         spacingRight: !phone,
+        contentColumnSmall: phone,
         bottomSectionSmall: phone,
       }"
     >

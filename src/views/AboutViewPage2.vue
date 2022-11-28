@@ -1,14 +1,24 @@
 <template>
   <div
-    class="contentWrapper"
-    style="margin-left: 1.3%; margin-right: 11%; padding-top: 3vh"
+    :class="{
+      contentWrapper: !phone,
+      contentWrapperSpacing: !phone,
+      contentWrapperSmall: phone,
+    }"
   >
     <div
       class="contentColumn CC-3-Fifths"
-      style="padding-right: 15%; margin-left: 3%"
+      :class="{ contentColumnSmall: phone, leftColumnSpacing: !phone }"
+      style="margin: auto"
     >
       <div class="alignLeft">
         <div class="sectionTitle">OUR HOUSE</div>
+        <img
+          v-if="false"
+          class="houseImagePhone"
+          src="@/assets/images/house.png"
+        />
+
         <div class="sectionContent" style="margin-top: 2%">
           Originally built in the 19th century, the building housed multiple
           generations of pharmacists. Since 2022 the house has been in the hands
@@ -26,7 +36,11 @@
           FLORDI PARTNERSHIP
         </div>
         <div class="imageTextBox">
-          <img class="flowerImage" src="@/assets/images/flowers.png" />
+          <img
+            v-if="!phone"
+            class="flowerImage"
+            src="@/assets/images/flowers.png"
+          />
           <div>
             <p class="sectionContent">
               No better place than a bar to bring people together. This is why
@@ -42,6 +56,7 @@
       </div>
     </div>
     <div
+      v-if="!phone"
       class="contentColumn CC-2-Fifths"
       style="display: inline; text-align: right"
     >
@@ -56,8 +71,23 @@ import Vue from "vue";
 export default Vue.extend({
   name: "AboutView",
   components: {},
-  computed: {},
-  methods: {},
+  data() {
+    return {
+      windowWidth: 0,
+    };
+  },
+  computed: {
+    phone() {
+      return this.$data.windowWidth < 650;
+    },
+  },
+  mounted() {
+    this.$data.windowWidth = window.innerWidth;
+
+    window.addEventListener("resize", () => {
+      this.$data.windowWidth = window.innerWidth;
+    });
+  },
 });
 </script>
 
@@ -66,6 +96,12 @@ export default Vue.extend({
   text-align: right;
   width: 100%;
   height: 100%;
+}
+
+.houseImagePhone {
+  padding-top: 0%;
+  text-align: right;
+  width: 95%;
 }
 
 .flowerImage {
@@ -92,5 +128,16 @@ export default Vue.extend({
 .imageTextBox {
   margin-top: 2%;
   display: flex;
+}
+
+.leftColumnSpacing {
+  padding-right: 15%;
+  margin-left: 3%;
+}
+
+.contentWrapperSpacing {
+  margin-left: 1.3%;
+  margin-right: 11%;
+  padding-top: 3vh;
 }
 </style>
