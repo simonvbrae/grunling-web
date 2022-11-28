@@ -21,7 +21,7 @@
         bottomSectionSmall: phone,
       }"
     >
-      <div class="alignLeft">
+      <div class="textAlignLeft">
         <div class="sectionContent" :class="{ centerText: phone }">
           Founded in 2022 by 5 young investors, Grunling's mission is to make
           the world a better place. Just as you should teach people how to fish
@@ -133,12 +133,6 @@ export default Vue.extend({
   flex: 2;
 }
 
-.alignLeft {
-  text-align: left;
-}
-.spacingLeft {
-  margin-left: 10%;
-}
 .spacingRight {
   padding-right: 5%;
   margin-left: 3%;

@@ -14,7 +14,7 @@
       <div class="alignLeft">
         <div class="sectionTitle">OUR HOUSE</div>
         <img
-          v-if="false"
+          v-if="phone"
           class="houseImagePhone"
           src="@/assets/images/house.png"
         />
