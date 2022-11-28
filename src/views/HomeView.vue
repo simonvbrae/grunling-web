@@ -1,29 +1,62 @@
 <template>
-  <div class="contentWrapper">
-    <div class="contentColumn">
-      <div class="sloganBox">
-        <p class="slogan">
-          A HOUSE <br />
-          WITH <br />
-          IMPACT
-        </p>
-        <p class="subSlogan">Connecting impact-driven entrepreneurs</p>
-        <div class="buttonBox">
-          <div class="buttonRow">
-            <v-btn class="text-center box" outlined tile> Co-working </v-btn>
-            <v-btn class="text-center box" outlined tile> Meeting rooms </v-btn>
-          </div>
-          <div class="buttonRow">
-            <v-btn class="text-center box" outlined tile> Offices </v-btn>
-            <v-btn class="text-center box" outlined tile>
-              Commercial spaces
-            </v-btn>
+  <div>
+    <div class="contentWrapper" v-if="!phone">
+      <div class="contentColumn">
+        <div class="sloganBox">
+          <p class="slogan">
+            A HOUSE <br />
+            WITH <br />
+            IMPACT
+          </p>
+          <p class="subSlogan">Connecting impact-driven entrepreneurs</p>
+          <div class="buttonBox">
+            <div class="buttonRow">
+              <v-btn class="text-center box" outlined tile> Co-working </v-btn>
+              <v-btn class="text-center box" outlined tile>
+                Meeting rooms
+              </v-btn>
+            </div>
+            <div class="buttonRow">
+              <v-btn class="text-center box" outlined tile> Offices </v-btn>
+              <v-btn class="text-center box" outlined tile>
+                Commercial spaces
+              </v-btn>
+            </div>
           </div>
         </div>
       </div>
+      <div class="contentColumn">
+        <img class="roomImg" src="@/assets/images/room.png" />
+      </div>
     </div>
-    <div class="contentColumn">
-      <img class="roomImg" src="@/assets/images/room.png" />
+    <div class="contentWrapperSmall" v-if="phone">
+      <div class="contentColumn">
+        <img class="roomImgSmall" src="@/assets/images/room.png" />
+      </div>
+      <div class="contentColumn">
+        <div class="sloganBox">
+          <p class="slogan">
+            A HOUSE <br />
+            WITH <br />
+            IMPACT
+          </p>
+          <p class="subSlogan">Connecting impact-driven entrepreneurs</p>
+          <div class="buttonBox">
+            <div class="buttonRow">
+              <v-btn class="text-center box" outlined tile> Co-working </v-btn>
+              <v-btn class="text-center box" outlined tile>
+                Meeting rooms
+              </v-btn>
+            </div>
+            <div class="buttonRow">
+              <v-btn class="text-center box" outlined tile> Offices </v-btn>
+              <v-btn class="text-center box" outlined tile>
+                Commercial spaces
+              </v-btn>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -34,8 +67,23 @@ import Vue from "vue";
 export default Vue.extend({
   name: "AboutView",
   components: {},
-  computed: {},
-  methods: {},
+  data() {
+    return {
+      windowWidth: 0,
+    };
+  },
+  computed: {
+    phone() {
+      return this.$data.windowWidth < 650;
+    },
+  },
+  mounted() {
+    this.$data.windowWidth = window.innerWidth;
+
+    window.addEventListener("resize", () => {
+      this.$data.windowWidth = window.innerWidth;
+    });
+  },
 });
 </script>
 
@@ -43,7 +91,13 @@ export default Vue.extend({
 .roomImg {
   display: flex;
   justify-self: left;
-  width: 98%; /*TODO image border right side*/
+  width: 98%;
+  height: 100%;
+}
+.roomImgSmall {
+  display: flex;
+  margin-left: 2%;
+  width: 98%;
   height: 100%;
 }
 

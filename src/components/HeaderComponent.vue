@@ -9,11 +9,11 @@
         >
           <LogoComponent style="width: 16.5vw; min-width: 180px" />
         </v-col>
-        <!-- <v-col cols="1" class="menuItem" :v-if="!phone"> About </v-col>
-        <v-col cols="1" class="menuItem" :v-if="!phone"> Offer </v-col>
-        <v-col cols="1" class="menuItem" :v-if="!phone"> Invest </v-col>
-        <v-col cols="1" class="menuItem" :v-if="!phone"> Contact </v-col> -->
-        <label :v-if="phone">
+        <v-col cols="1" class="menuItem" v-if="!phone"> About </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone"> Offer </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone"> Invest </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone"> Contact </v-col>
+        <label v-if="phone">
           <input type="checkbox" />
           <span class="menu"> <span class="hamburger"></span> </span>
           <ul>
@@ -35,10 +35,22 @@ import LogoComponent from "./LogoComponent.vue";
 export default Vue.extend({
   name: "MenuBar",
   components: { LogoComponent },
+  data() {
+    return {
+      windowWidth: 0,
+    };
+  },
   computed: {
     phone() {
-      return true;
+      return this.$data.windowWidth < 650;
     },
+  },
+  mounted() {
+    this.$data.windowWidth = window.innerWidth;
+
+    window.addEventListener("resize", () => {
+      this.$data.windowWidth = window.innerWidth;
+    });
   },
 });
 </script>
@@ -64,6 +76,7 @@ export default Vue.extend({
   margin-right: 2%;
 }
 
+/* Hamburger menu */
 label .menu {
   position: absolute;
   right: -100px;
@@ -161,4 +174,5 @@ label a {
   color: #f38630;
   text-decoration: none;
 }
+/* End Hamburger menu*/
 </style>
