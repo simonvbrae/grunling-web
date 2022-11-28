@@ -8,6 +8,10 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.centerText {
+  text-align: center;
+}
+
 /* prevent every type of horizontal scroll  */
 /* overflow-x: hidden; will stop element from scrolling.*/
 html {
@@ -40,6 +44,11 @@ body {
   display: flex;
   height: 100%;
   flex: 1;
+}
+
+.contentColumnSmall {
+  width: 95%;
+  margin: auto;
 }
 
 /* Fonts */

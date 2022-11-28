@@ -96,8 +96,9 @@ export default Vue.extend({
 }
 .roomImgSmall {
   display: flex;
-  margin-left: 2%;
-  width: 98%;
+  justify-self: center;
+  margin: auto;
+  width: 95%;
   height: 100%;
 }
 

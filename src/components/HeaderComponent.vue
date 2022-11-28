@@ -9,20 +9,10 @@
         >
           <LogoComponent style="width: 16.5vw; min-width: 180px" />
         </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone"> About </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone"> Offer </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone"> Invest </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone"> Contact </v-col>
-        <label v-if="phone">
-          <input type="checkbox" />
-          <span class="menu"> <span class="hamburger"></span> </span>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Offer</a></li>
-            <li><a href="#">Invest</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </label>
+        <v-col cols="1" class="menuItem"> About </v-col>
+        <v-col cols="1" class="menuItem"> Offer </v-col>
+        <v-col cols="1" class="menuItem"> Invest </v-col>
+        <v-col cols="1" class="menuItem"> Contact </v-col>
       </v-row>
     </v-container>
   </div>
@@ -54,6 +44,7 @@ export default Vue.extend({
   },
 });
 </script>
+
 <style scoped>
 .headerBar {
   display: block;
