@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="contentColumn">
-        <img class="roomImg" src="@/assets/images/room.png" />
+        <img class="roomImg" src="@/assets/images/room.jpg" />
       </div>
     </div>
     <div class="contentWrapperSmall" v-if="phone">

@@ -88,41 +88,37 @@
             Change the world with your money. Align your heart, economical
             intellect and savings and join in our investment.
           </p>
-          <ul v-if="phone" class="sectionContent">
-            <li>You contribute to the impact we make</li>
-            <li>You will have zero responsibilities.</li>
-            <li>Your liability will be limited to your investment.</li>
-          </ul>
-
-          <p
-            class="sectionTitle sectionMargin"
-            :class="{ sectionMargin: !phone, sectionMarginPhone: phone }"
-          >
-            INTERESTED?
-          </p>
-          <div class="imageTextBox" :class="{ 'flex-wrap': narrow }">
-            <img
-              v-if="!phone"
-              class="tomImage"
-              src="@/assets/images/tom.png"
-              style="margin-right: 5%"
-            />
-            <div>
-              <p class="sectionContent">
-                Make an appointment with Tom Michels, co-founder and managing
-                director.
-              </p>
-              <p class="sectionContent" style="margin-top: 8%">
-                Tom@grunling.com
-              </p>
+          <div v-if="!phone">
+            <p
+              class="sectionTitle sectionMargin"
+              :class="{ sectionMargin: !phone, sectionMarginPhone: phone }"
+            >
+              INTERESTED?
+            </p>
+            <div class="imageTextBox" :class="{ 'flex-wrap': narrow }">
+              <img
+                v-if="!phone"
+                class="tomImage"
+                src="@/assets/images/tom.png"
+                style="margin-right: 5%"
+              />
+              <div>
+                <p class="sectionContent">
+                  Make an appointment with Tom Michels, co-founder and managing
+                  director.
+                </p>
+                <p class="sectionContent" style="margin-top: 8%">
+                  Tom@grunling.com
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="tomimagePhoneContainer">
-            <img
-              v-if="phone"
-              class="tomImagePhone"
-              src="@/assets/images/tom.png"
-            />
+            <div class="tomimagePhoneContainer">
+              <img
+                v-if="phone"
+                class="tomImagePhone"
+                src="@/assets/images/tom.png"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -155,6 +151,42 @@
               <li>A vote on the General Meeting</li>
               <li>Contributing to a better world</li>
             </ul>
+          </div>
+        </div>
+      </div>
+      <div class="contentWrapper" :class="{ contentWrapperSmall: phone }">
+        <div class="contentColumn CC-45" :class="{ contentColumnSmall: phone }">
+          <div v-if="phone" class="textAlignLeft">
+            <p
+              class="sectionTitle sectionMargin"
+              :class="{ sectionMargin: !phone, sectionMarginPhone: phone }"
+            >
+              INTERESTED?
+            </p>
+            <div class="imageTextBox" :class="{ 'flex-wrap': narrow }">
+              <img
+                v-if="!phone"
+                class="tomImage"
+                src="@/assets/images/tom.png"
+                style="margin-right: 5%"
+              />
+              <div>
+                <p class="sectionContent">
+                  Make an appointment with Tom Michels, co-founder and managing
+                  director.
+                </p>
+                <p class="sectionContent" style="margin-top: 8%">
+                  Tom@grunling.com
+                </p>
+              </div>
+            </div>
+            <div class="tomimagePhoneContainer">
+              <img
+                v-if="phone"
+                class="tomImagePhone"
+                src="@/assets/images/tom.png"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -230,11 +262,11 @@ export default Vue.extend({
   border-width: 6px;
   display: block;
 
-  width: 90%;
+  width: 30%;
 }
 .tomimagePhoneContainer {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .CC-55 {

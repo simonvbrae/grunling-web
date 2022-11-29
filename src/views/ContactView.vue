@@ -16,11 +16,6 @@
           >
             GET IN TOUCH
           </p>
-          <img
-            v-if="phone"
-            :class="{ chlorisImagePhone: phone }"
-            src="@/assets/images/chloris2.png"
-          />
 
           <p class="textAlignLeft sectionContent">
             Searching for more info, interested in joining our team or looking
@@ -31,8 +26,17 @@
             stay in touch?
           </p>
           <p class="textAlignLeft sectionContent">
-            <a href="mailto:info@grunling.com">Mail to info@grunling.com</a>
+            Mail to:
+            <a href="mailto:info@grunling.com" style="color: black"
+              >info@grunling.com</a
+            >
           </p>
+
+          <img
+            v-if="phone"
+            :class="{ chlorisImagePhone: phone }"
+            src="@/assets/images/chloris2.png"
+          />
         </div>
       </div>
     </div>
@@ -42,7 +46,7 @@
     >
       <div
         v-if="!phone"
-        class="contentColumn CC-45"
+        class="contentColumn CC-4 mapColumn"
         :class="{ contentColumnSmall: phone }"
       >
         <div style="width: 100%">
@@ -60,7 +64,10 @@
           </div>
         </div>
       </div>
-      <div class="contentColumn CC-45" :class="{ contentColumnSmall: phone }">
+      <div
+        class="contentColumn CC-6 findUsColumn"
+        :class="{ contentColumnSmall: phone }"
+      >
         <div style="width: 100%">
           <p
             class="sectionTitle textAlignLeft"
@@ -154,6 +161,9 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.findUsColumn {
+  margin-left: 3%;
+}
 .getInTouchColumn {
   margin-top: 7%;
   width: 10px;
@@ -163,6 +173,11 @@ export default Vue.extend({
   width: 60%;
 }
 
+.mapColumn {
+  margin-left: 16%;
+  margin-right: 1.5%;
+  /* margin-top: 5%; */
+}
 .chlorisColumn {
   margin-left: 22%;
   margin-top: 5%;

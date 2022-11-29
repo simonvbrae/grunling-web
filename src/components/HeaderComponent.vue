@@ -53,7 +53,7 @@
         <ul class="menu sectionContent" v-if="phone">
           <li>
             <router-link
-              style="text-decoration-line: none; color: white"
+              style="text-decoration-line: none; color: black"
               to="/about"
               ><p v-on:click="closeMenu">About</p></router-link
             >
@@ -67,14 +67,14 @@
           </li> -->
           <li>
             <router-link
-              style="text-decoration-line: none; color: white"
+              style="text-decoration-line: none; color: black"
               to="/invest"
               ><p v-on:click="closeMenu">Invest</p></router-link
             >
           </li>
           <li>
             <router-link
-              style="text-decoration-line: none; color: white"
+              style="text-decoration-line: none; color: black"
               to="/contact"
               ><p v-on:click="closeMenu">Contact</p></router-link
             >
@@ -235,7 +235,7 @@ export default Vue.extend({
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
+    border: 1px solid #ffee99;
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -247,7 +247,7 @@ export default Vue.extend({
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-color: #222;
+    background-color: #fff8d4;
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
