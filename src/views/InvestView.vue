@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="viewBackgroundDiv">
     <div class="contentWrapper" :class="{ contentWrapperSmall: phone }">
       <div
         v-if="phone"
@@ -95,7 +95,7 @@
             </ul>
 
             <p class="sectionTitle" :class="{ sectionMarginPhone: phone }">
-              your Advantages
+              YOUR ADVANTAGES
             </p>
             <ul class="sectionContent">
               <li>
@@ -109,6 +109,94 @@
               <li>A vote on the General Meeting</li>
               <li>Contributing to a better world</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      :class="{
+        contentWrapper: !phone,
+        contentWrapperSpacing: !phone,
+        contentWrapperSmall: phone,
+        secondPageFullScreen: !phone,
+      }"
+    >
+      <div
+        class="contentColumn CC-55 textAlignLeft"
+        :class="{ contentColumnSmall: phone, leftColumnSpacing: !phone }"
+      >
+        <div>
+          <div class="sectionTitle textAlignLeft">OUR SHARES</div>
+          <ul class="sectionContent">
+            <li>Shares are issued at €250</li>
+            <li>Investing with Grunling is possible from €1000</li>
+          </ul>
+          <p class="sectionTitle" :class="{ sectionMarginPhone: phone }">
+            YOUR ADVANTAGES
+          </p>
+          <ul class="sectionContent">
+            <li>
+              Tax benefits from 45% possible with tax-shelter via Flordi CV
+              <ul>
+                <li>every €1000, you gain €450 tax benefit</li>
+              </ul>
+            </li>
+            <li>Envisioned yield of 2% on your shares</li>
+            <li>Dividends possible up to 6%</li>
+            <li>A vote on the General Meeting</li>
+            <li>Contributing to a better world</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contentColumn CC-45" :class="{ contentColumnSmall: phone }">
+        <div
+          :class="{ sloganBox: !phone, spacingInvestTextLower: !phone }"
+          class="textAlignLeft"
+          style="margin-top: 5.5%"
+        >
+          <p class="sectionTitle">INVEST WITH US</p>
+          <p class="sectionContent" style="margin-top: -2%">
+            <b><i>In Grunling or Flordi</i></b>
+          </p>
+          <p class="sectionContent">
+            Change the world with your money. Align your heart, economical
+            intellect and savings and join in our investment.
+          </p>
+          <ul v-if="phone" class="sectionContent">
+            <li>You contribute to the impact we make</li>
+            <li>You will have zero responsibilities.</li>
+            <li>Your liability will be limited to your investment.</li>
+          </ul>
+
+          <p
+            class="sectionTitle sectionMargin"
+            :class="{ sectionMargin: !phone, sectionMarginPhone: phone }"
+          >
+            INTERESTED?
+          </p>
+          <div class="imageTextBox" :class="{ 'flex-wrap': narrow }">
+            <img
+              v-if="!phone"
+              class="tomImage"
+              src="@/assets/images/tom.png"
+              style="margin-right: 5%"
+            />
+            <div>
+              <p class="sectionContent">
+                Make an appointment with Tom Michels, co-founder and managing
+                director.
+              </p>
+              <p class="sectionContent" style="margin-top: 8%">
+                Tom@grunling.com
+              </p>
+            </div>
+          </div>
+          <div class="tomimagePhoneContainer">
+            <img
+              v-if="phone"
+              class="tomImagePhone"
+              src="@/assets/images/tom.png"
+            />
           </div>
         </div>
       </div>
@@ -146,6 +234,10 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.leftColumnSpacing {
+  padding-right: 0%;
+  margin-left: 5%;
+}
 .grunlingImage {
   margin-top: 5%;
   margin-left: 7%;
@@ -216,5 +308,9 @@ export default Vue.extend({
 
 .spacingInvestText {
   max-width: 65%;
+}
+.secondPageFullScreen {
+  margin-top: 10%;
+  height: max(550px, 85vh);
 }
 </style>

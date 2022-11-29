@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 100%; height: 100%; background-color: rgb(232, 230, 230)">
+  <div class="viewBackgroundDiv">
     <div
       :class="{
         contentWrapper: !phone,
@@ -101,7 +101,7 @@
       }"
     >
       <div
-        class="contentColumn CC-3-Fifths"
+        class="contentColumn CC-3-Fifths textAlignLeft"
         :class="{ contentColumnSmall: phone, leftColumnSpacing: !phone }"
       >
         <div>

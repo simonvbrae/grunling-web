@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 100%; height: 100%; background-color: rgb(232, 230, 230)">
+  <div class="viewBackgroundDiv">
     <div class="contentWrapper" :class="{ contentWrapperSmall: phone }">
       <div class="contentColumn CC-4 chlorisColumn" v-if="!phone">
         <img class="chlorisImage" src="@/assets/images/chloris2.png" />
