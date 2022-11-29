@@ -120,7 +120,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "AboutView",
+  name: "InvestView",
   components: {},
   data() {
     return {
