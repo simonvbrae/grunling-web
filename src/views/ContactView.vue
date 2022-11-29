@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width: 100%; height: 100%; background-color: rgb(232, 230, 230)">
     <div class="contentWrapper" :class="{ contentWrapperSmall: phone }">
       <div class="contentColumn CC-4 chlorisColumn" v-if="!phone">
         <img class="chlorisImage" src="@/assets/images/chloris2.png" />
@@ -36,7 +36,30 @@
         </div>
       </div>
     </div>
-    <div class="contentWrapper" :class="{ contentWrapperSmall: phone }">
+    <div
+      class="contentWrapper"
+      :class="{ secondPageFullScreen: !phone, contentWrapperSmall: phone }"
+    >
+      <div
+        v-if="!phone"
+        class="contentColumn CC-45"
+        :class="{ contentColumnSmall: phone }"
+      >
+        <div style="width: 100%">
+          <div class="mapDiv">
+            <l-map
+              :zoom="zoom"
+              :center="center"
+              :options="mapOptions"
+              @update:center="centerUpdate"
+              @update:zoom="zoomUpdate"
+            >
+              <l-tile-layer :url="url" :attribution="attribution" />
+              <l-marker :lat-lng="markerLocation" />
+            </l-map>
+          </div>
+        </div>
+      </div>
       <div class="contentColumn CC-45" :class="{ contentColumnSmall: phone }">
         <div style="width: 100%">
           <p
@@ -45,7 +68,7 @@
           >
             WHERE TO FIND US
           </p>
-          <div v-if="phone" class="mapDiv">
+          <div v-if="phone" class="mapDivPhone">
             <l-map
               :zoom="zoom"
               :center="center"
@@ -219,6 +242,14 @@ export default Vue.extend({
   max-width: 65%;
 }
 
+.mapDivPhone {
+  margin: auto;
+  text-align: center;
+  z-index: 0;
+  height: max(320px, 30vw);
+  width: max(320px, 30vw);
+  margin-bottom: 2%;
+}
 .mapDiv {
   margin: auto;
   text-align: center;
@@ -226,5 +257,10 @@ export default Vue.extend({
   height: max(320px, 30vw);
   width: max(320px, 30vw);
   margin-bottom: 2%;
+}
+
+.secondPageFullScreen {
+  margin-top: 10%;
+  height: max(550px, 85vh);
 }
 </style>
