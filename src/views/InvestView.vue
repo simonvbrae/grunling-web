@@ -54,9 +54,14 @@
           >
             INTERESTED?
           </p>
-          <div class="imageTextBox">
-            <img v-if="!phone" class="tomImage" src="@/assets/images/tom.png" />
-            <div style="margin-left: 5%">
+          <div class="imageTextBox" :class="{ 'flex-wrap': narrow }">
+            <img
+              v-if="!phone"
+              class="tomImage"
+              src="@/assets/images/tom.png"
+              style="margin-right: 5%"
+            />
+            <div>
               <p class="sectionContent">
                 Make an appointment with Tom Michels, co-founder and managing
                 director.
@@ -126,6 +131,9 @@ export default Vue.extend({
     phone() {
       return this.$data.windowWidth < 650;
     },
+    narrow() {
+      return this.$data.windowWidth < 1080;
+    },
   },
   mounted() {
     this.$data.windowWidth = window.innerWidth;
@@ -163,7 +171,8 @@ export default Vue.extend({
 
   margin-left: -1%;
 
-  width: 45%;
+  width: auto;
+  height: 178px;
 }
 .tomImagePhone {
   border-style: solid;
