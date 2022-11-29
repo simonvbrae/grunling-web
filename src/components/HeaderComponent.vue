@@ -7,12 +7,40 @@
           align-self="start"
           style="margin-right: 1%; margin-top: 1.2%"
         >
-          <LogoComponent style="width: 16.5vw; min-width: 180px" />
+          <router-link to="/home"
+            ><LogoComponent
+              v-on:click="closeMenu"
+              style="width: 16.5vw; min-width: 180px"
+          /></router-link>
         </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone"> About </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone"> Offer </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone"> Invest </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone"> Contact </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone">
+          <router-link
+            style="text-decoration-line: none; color: black"
+            to="/about"
+            >About</router-link
+          >
+        </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone">
+          <router-link
+            style="text-decoration-line: none; color: black"
+            to="/offer"
+            >Offer</router-link
+          >
+        </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone">
+          <router-link
+            style="text-decoration-line: none; color: black"
+            to="/invest"
+            >Invest</router-link
+          >
+        </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone">
+          <router-link
+            style="text-decoration-line: none; color: black"
+            to="/contact"
+            >Contact</router-link
+          >
+        </v-col>
         <input
           id="menu-toggle"
           type="checkbox"

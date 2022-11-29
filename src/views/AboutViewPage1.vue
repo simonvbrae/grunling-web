@@ -6,6 +6,7 @@
       paddingTop: !phone,
       contentWrapperSmall: phone,
     }"
+    style="margin-left: 10%; padding-top: 6vh"
   >
     <div
       class="contentColumn CC-1-Third"
