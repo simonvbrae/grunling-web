@@ -11,31 +11,31 @@
       :class="{ contentColumnSmall: phone, leftColumnSpacing: !phone }"
       style="margin: auto"
     >
-      <div class="alignLeft">
-        <div class="sectionTitle">OUR HOUSE</div>
+      <div>
+        <div class="sectionTitle textAlignLeft">OUR HOUSE</div>
         <img
           v-if="phone"
           class="houseImagePhone"
           src="@/assets/images/house.png"
         />
 
-        <div class="sectionContent" style="margin-top: 2%">
+        <div class="sectionContent textAlignLeft" style="margin-top: 2%">
           Originally built in the 19th century, the building housed multiple
           generations of pharmacists. Since 2022 the house has been in the hands
           of a new generation - Grunling.
         </div>
-        <div class="sectionTitle" style="margin-top: 6.5%">
+        <div class="sectionTitle textAlignLeft" style="margin-top: 6.5%">
           A TOTAL MAKEOVER
         </div>
-        <div class="sectionContent" style="margin-top: 2%">
+        <div class="sectionContent textAlignLeft" style="margin-top: 2%">
           At the moment the house is receiving a total makeover in order to
           become energy-efficient and to be ready for the upcoming activities,
           starting in 2023.
         </div>
-        <div class="sectionTitle" style="margin-top: 8.5%">
+        <div class="sectionTitle textAlignLeft" style="margin-top: 8.5%">
           FLORDI PARTNERSHIP
         </div>
-        <div class="imageTextBox">
+        <div class="imageTextBox textAlignLeft">
           <img
             v-if="!phone"
             class="flowerImage"
@@ -99,8 +99,8 @@ export default Vue.extend({
 }
 
 .houseImagePhone {
-  padding-top: 0%;
-  text-align: right;
+  margin: auto;
+  padding-top: 2%;
   width: 95%;
 }
 
@@ -119,10 +119,6 @@ export default Vue.extend({
 
 .CC-3-Fifths {
   flex: 3;
-}
-
-.alignLeft {
-  text-align: left;
 }
 
 .imageTextBox {

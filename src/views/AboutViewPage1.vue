@@ -3,15 +3,15 @@
     :class="{
       contentWrapper: !phone,
       marginLeft: !phone,
+      paddingTop: !phone,
       contentWrapperSmall: phone,
     }"
-    style="padding-top: 6vh"
   >
     <div
       class="contentColumn CC-1-Third"
       :class="{ contentColumnSmall: phone }"
     >
-      <img class="grunlingImage" src="@/assets/images/grunling.png" />
+      <img class="chlorisImage" src="@/assets/images/chloris.png" />
     </div>
     <div
       class="contentColumn CC-2-Thirds"
@@ -118,7 +118,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.grunlingImage {
+.chlorisImage {
   margin: auto;
   width: 90%;
   height: 90%;
@@ -136,6 +136,10 @@ export default Vue.extend({
 .spacingRight {
   padding-right: 5%;
   margin-left: 3%;
+}
+
+.paddingTop {
+  padding-top: 6vh;
 }
 
 .bottomSectionSmall {

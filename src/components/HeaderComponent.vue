@@ -9,48 +9,53 @@
         >
           <LogoComponent style="width: 16.5vw; min-width: 180px" />
         </v-col>
-        <!-- <v-col cols="1" class="menuItem"> About </v-col>
-        <v-col cols="1" class="menuItem"> Offer </v-col>
-        <v-col cols="1" class="menuItem"> Invest </v-col>
-        <v-col cols="1" class="menuItem"> Contact </v-col> -->
-        <input id="menu-toggle" type="checkbox" />
-        <label class="menu-button-container" for="menu-toggle">
+        <v-col cols="1" class="menuItem" v-if="!phone"> About </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone"> Offer </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone"> Invest </v-col>
+        <v-col cols="1" class="menuItem" v-if="!phone"> Contact </v-col>
+        <input
+          id="menu-toggle"
+          type="checkbox"
+          v-model="hamburgerMenuIsOpen"
+          v-if="phone"
+        />
+        <label class="menu-button-container" for="menu-toggle" v-if="phone">
           <div class="menu-button"></div>
         </label>
-        <ul class="menu sectionContent">
+        <ul class="menu sectionContent" v-if="phone">
           <li>
             <router-link
               style="text-decoration-line: none; color: white"
               to="/about"
-              >About</router-link
+              ><p v-on:click="closeMenu">About</p></router-link
             >
           </li>
           <li>
             <router-link
               style="text-decoration-line: none; color: white"
               to="/about2"
-              >About2</router-link
+              ><p v-on:click="closeMenu">About2</p></router-link
             >
           </li>
           <li>
             <router-link
               style="text-decoration-line: none; color: white"
               to="/offer"
-              >Offer</router-link
-            >
+              ><p v-on:click="closeMenu">Offer</p>
+            </router-link>
           </li>
           <li>
             <router-link
               style="text-decoration-line: none; color: white"
               to="/invest"
-              >Invest</router-link
+              ><p v-on:click="closeMenu">Invest</p></router-link
             >
           </li>
           <li>
             <router-link
               style="text-decoration-line: none; color: white"
               to="/contact"
-              >Contact</router-link
+              ><p v-on:click="closeMenu">Contact</p></router-link
             >
           </li>
         </ul>
@@ -61,6 +66,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+
 import LogoComponent from "./LogoComponent.vue";
 
 export default Vue.extend({
@@ -69,7 +75,14 @@ export default Vue.extend({
   data() {
     return {
       windowWidth: 0,
+      hamburgerMenuIsOpen: false,
     };
+  },
+  methods: {
+    closeMenu: function (event: any) {
+      // `this` inside methods point to the Vue instance
+      this.$data.hamburgerMenuIsOpen = false;
+    },
   },
   computed: {
     phone() {
@@ -139,7 +152,7 @@ export default Vue.extend({
 .menu-button::before,
 .menu-button::after {
   display: block;
-  background-color: #fff;
+  background-color: black;
   position: absolute;
   height: 4px;
   width: 30px;
