@@ -60,7 +60,7 @@
           </li>
           <li>
             <router-link
-              style="text-decoration-line: none; color: white"
+              style="text-decoration-line: none; color: black"
               to="/offer"
               ><p v-on:click="closeMenu">Offer</p>
             </router-link>
