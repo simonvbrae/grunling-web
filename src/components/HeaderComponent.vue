@@ -20,13 +20,13 @@
             >About</router-link
           >
         </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone">
+        <!-- <v-col cols="1" class="menuItem" v-if="!phone">
           <router-link
             style="text-decoration-line: none; color: black"
             to="/offer"
             >Offer</router-link
           >
-        </v-col>
+        </v-col> -->
         <v-col cols="1" class="menuItem" v-if="!phone">
           <router-link
             style="text-decoration-line: none; color: black"
@@ -58,20 +58,13 @@
               ><p v-on:click="closeMenu">About</p></router-link
             >
           </li>
-          <li>
-            <router-link
-              style="text-decoration-line: none; color: white"
-              to="/about2"
-              ><p v-on:click="closeMenu">About2</p></router-link
-            >
-          </li>
-          <li>
+          <!-- <li>
             <router-link
               style="text-decoration-line: none; color: white"
               to="/offer"
               ><p v-on:click="closeMenu">Offer</p>
             </router-link>
-          </li>
+          </li> -->
           <li>
             <router-link
               style="text-decoration-line: none; color: white"
