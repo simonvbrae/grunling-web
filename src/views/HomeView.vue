@@ -104,9 +104,9 @@ export default Vue.extend({
 
 .slogan {
   line-height: 120%;
-  font-family: "Coinage Caps Eric Gill W01";
-  font-size: 530%;
   letter-spacing: 3px;
+  font-family: "Coinage Caps Eric Gill W01";
+  font-size: min(530%, max(50px, 6vw));
   color: black;
 }
 
