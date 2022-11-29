@@ -128,24 +128,29 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+.headerBar {
+  display: block;
+  block-size: fit-content;
+  width: 100%;
+  height: 19vh;
+}
 
-/* * {
-  font-family: "Raleway";
-  box-sizing: border-box;
-} */
+.menuItem {
+  font-family: "DM Sans";
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 3px;
 
-/* .top-nav {
-  display: flex;
-  flex-direction: row;
+  margin: auto;
   align-items: center;
-  justify-content: space-between;
-  background-color: #00baf0;
-  background: linear-gradient(to left, #f46b45, #eea849);
-  color: #fff;
-  height: 50px;
-  padding: 1em;
-} */
+
+  min-width: 10%;
+  margin-right: 2%;
+}
+
+/** Hamburger menu start */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 
 .menu {
   display: flex;
@@ -255,130 +260,5 @@ export default Vue.extend({
     border-bottom: 1px solid #444;
   }
 }
-/**HAAAAAAAAAAAAAAAaaaa */
-/**HAAAAAAAAAAAAAAAaaaa */
-/**HAAAAAAAAAAAAAAAaaaa */
-/**HAAAAAAAAAAAAAAAaaaa */
-/**HAAAAAAAAAAAAAAAaaaa */
-
-.headerBar {
-  display: block;
-  block-size: fit-content;
-  width: 100%;
-  height: 19vh;
-}
-
-.menuItem {
-  font-family: "DM Sans";
-  font-weight: bold;
-  color: black;
-  font-size: 20px;
-  letter-spacing: 3px;
-
-  margin: auto;
-  align-items: center;
-
-  min-width: 10%;
-  margin-right: 2%;
-}
-
-/* Hamburger menu */
-label .menu {
-  position: absolute;
-  right: -100px;
-  top: -100px;
-  z-index: 100;
-  width: 200px;
-  height: 200px;
-  background: #fff;
-  border-radius: 50% 50% 50% 50%;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
-  cursor: pointer;
-}
-
-label .hamburger {
-  position: absolute;
-  top: 135px;
-  left: 50px;
-  width: 30px;
-  height: 2px;
-  background: #69d2e7;
-  display: block;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-label .hamburger:after,
-label .hamburger:before {
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #69d2e7;
-}
-
-label .hamburger:before {
-  top: -10px;
-}
-
-label .hamburger:after {
-  bottom: -10px;
-}
-
-label input {
-  display: none;
-}
-
-label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
-  border-radius: 0;
-}
-
-label input:checked + .menu .hamburger {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-label input:checked + .menu .hamburger:after {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  bottom: 0;
-}
-
-label input:checked + .menu .hamburger:before {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  top: 0;
-}
-
-label input:checked + .menu + ul {
-  opacity: 1;
-}
-
-label ul {
-  z-index: 200;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  -webkit-transition: 0.25s 0s ease-in-out;
-  transition: 0.25s 0s ease-in-out;
-}
-
-label a {
-  margin-bottom: 1em;
-  display: block;
-  color: #f38630;
-  text-decoration: none;
-}
-/* End Hamburger menu*/
+/** Hamburger menu end */
 </style>
