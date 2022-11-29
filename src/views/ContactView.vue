@@ -6,10 +6,10 @@
       </div>
       <div
         class="contentColumn CC-6"
-        :class="{ getInTouch: !phone, contentColumnSmall: phone }"
+        :class="{ getInTouchColumn: !phone, contentColumnSmall: phone }"
         style="margin-bottom: 10%; text-align: center"
       >
-        <div>
+        <div :class="{ getInTouchDiv: !phone }">
           <p
             class="textAlignLeft sectionTitle"
             :class="{ sectionMarginPhone: phone }"
@@ -106,10 +106,10 @@ export default Vue.extend({
   },
   methods: {
     zoomUpdate(zoom: number) {
-      this.currentZoom = zoom;
+      this.$data.currentZoom = zoom;
     },
     centerUpdate(center: LatLng) {
-      this.currentCenter = center;
+      this.$data.currentCenter = center;
     },
   },
   computed: {
@@ -131,8 +131,13 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.getInTouch {
+.getInTouchColumn {
   margin-top: 7%;
+  width: 10px;
+}
+
+.getInTouchDiv {
+  width: 60%;
 }
 
 .chlorisColumn {
@@ -204,7 +209,7 @@ export default Vue.extend({
 }
 
 .sectionMargin {
-  margin-top: 40%;
+  margin-right: 100%;
 }
 .sectionMarginPhone {
   margin-top: 10%;
