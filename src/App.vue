@@ -38,7 +38,7 @@ export default Vue.extend({
 
 <style>
 #app {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(232, 230, 230);
   overflow-x: hidden;
   max-width: 100vw;
 }

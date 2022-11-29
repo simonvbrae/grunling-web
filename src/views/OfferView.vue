@@ -1,6 +1,6 @@
 <template>
   <div class="contentWrapper" style="padding-top: 3vh">
-    <img class="offerImage" src="@/assets/images/offer.png" />
+    <img src="@/assets/images/coworking.png" class="offerImage" />
   </div>
 </template>
 

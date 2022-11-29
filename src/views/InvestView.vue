@@ -24,19 +24,18 @@
       </div>
       <div v-if="!phone" class="contentColumn CC-3">
         <div class="textAlignLeft" :class="{ spacingColumn1: !phone }">
-          <p class="sectionTitle" :class="{ sectionMarginPhone: phone }">
-            OUR SHARES
+          <p class="sectionTitle">INVEST WITH US</p>
+          <p class="sectionContent" style="margin-top: -2%">
+            <b><i>In Grunling or Flordi</i></b>
           </p>
-          <p class="sectionContent"></p>
-          <ul class="sectionContent li">
-            <li>Shares are issued at €250</li>
-            <li>Investing with Grunling is possible starting from €1000</li>
-          </ul>
-
+          <p class="sectionContent">
+            Change the world with your money. Align your heart, economical
+            intellect and savings and join in our investment.
+          </p>
           <p
             class="sectionTitle"
-            :class="{ sectinoMargin: !phone, sectionMarginPhone: phone }"
-            style="margin-top: 30%"
+            :class="{ sectionMargin: !phone, sectionMarginPhone: phone }"
+            style="margin-top: 10%"
           >
             YOUR ADVANTAGES
           </p>
@@ -55,13 +54,14 @@
         </div>
       </div>
       <div v-if="!phone" class="contentColumn CC-3">
-        <div style="width: 75%; margin-top: 30%; margin-left: 5%">
-          <p
-            class="sectionTitle"
-            :class="{ sectionMarginPhone: phone }"
-            style="line-height: 110%; font-family: 'DM Sans'"
-          >
-            <strong>INVESTING <br />IN THE FUTURE</strong>
+        <div style="width: 75%; margin-left: 5%" class="textAlignLeft">
+          <img
+            src="@/assets/images/grunling2.png"
+            class="grunlingImage"
+            :class="{ grunlingImageSpacingPC: !phone }"
+          />
+          <p class="sectionTitle" :class="{ sectionMarginPhone: phone }">
+            INVESTING IN THE FUTURE
           </p>
           <p class="sectionContent">
             Through the purchase of the property and accompanying land of the
@@ -80,14 +80,15 @@
           class="textAlignLeft"
           style="margin-top: 5.5%"
         >
-          <p class="sectionTitle">INVEST WITH US</p>
-          <p class="sectionContent" style="margin-top: -2%">
-            <b><i>In Grunling or Flordi</i></b>
+          <p class="sectionTitle" :class="{ sectionMarginPhone: phone }">
+            OUR SHARES
           </p>
-          <p class="sectionContent">
-            Change the world with your money. Align your heart, economical
-            intellect and savings and join in our investment.
-          </p>
+          <p class="sectionContent"></p>
+          <ul class="sectionContent li">
+            <li>Shares are issued at €250</li>
+            <li>Investing with Grunling is possible starting from €1000</li>
+          </ul>
+
           <div v-if="!phone">
             <p
               class="sectionTitle sectionMargin"
@@ -224,23 +225,17 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.leftColumnSpacing {
-  padding-right: 0%;
-  margin-left: 5%;
-}
 .grunlingImage {
-  margin-top: 5%;
-  margin-left: 7%;
+  margin: auto;
+  /* margin-top: 5%; */
+  /* margin-left: 7%; */
   display: flex;
   justify-self: left;
-  width: 90%;
-  height: 100%;
+  width: 100%;
 }
-.grunlingImagePhone {
-  display: flex;
-  margin: auto;
-  width: 95%;
-  height: 100%;
+
+.grunlingImageSpacingPC {
+  margin-bottom: 20%;
 }
 
 .tomImage {
