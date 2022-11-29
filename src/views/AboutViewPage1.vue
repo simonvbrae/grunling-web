@@ -7,7 +7,6 @@
         paddingTop: !phone,
         contentWrapperSmall: phone,
       }"
-      style="margin-left: 10%; padding-top: 6vh"
     >
       <div
         class="contentColumn CC-1-Third"
@@ -93,70 +92,6 @@
         </div>
       </div>
     </div>
-    <div
-      :class="{
-        contentWrapper: !phone,
-        contentWrapperSpacing: !phone,
-        contentWrapperSmall: phone,
-      }"
-    >
-      <div
-        class="contentColumn CC-3-Fifths"
-        :class="{ contentColumnSmall: phone, leftColumnSpacing: !phone }"
-        style="margin: auto"
-      >
-        <div>
-          <div class="sectionTitle textAlignLeft">OUR HOUSE</div>
-          <img
-            v-if="phone"
-            class="houseImagePhone"
-            src="@/assets/images/house.png"
-          />
-
-          <div class="sectionContent textAlignLeft" style="margin-top: 2%">
-            Originally built in the 19th century, the building housed multiple
-            generations of pharmacists. Since 2022 the house has been in the
-            hands of a new generation - Grunling.
-          </div>
-          <div class="sectionTitle textAlignLeft" style="margin-top: 6.5%">
-            A TOTAL MAKEOVER
-          </div>
-          <div class="sectionContent textAlignLeft" style="margin-top: 2%">
-            At the moment the house is receiving a total makeover in order to
-            become energy-efficient and to be ready for the upcoming activities,
-            starting in 2023.
-          </div>
-          <div class="sectionTitle textAlignLeft" style="margin-top: 8.5%">
-            FLORDI PARTNERSHIP
-          </div>
-          <div class="imageTextBox textAlignLeft">
-            <img
-              v-if="!phone"
-              class="flowerImage"
-              src="@/assets/images/flowers.png"
-            />
-            <div>
-              <p class="sectionContent">
-                No better place than a bar to bring people together. This is why
-                Grunling has a partnership with Café Flordi next door - an old
-                flower shop that was turned into a bar - opening in 2023.
-              </p>
-              <p class="sectionContent" style="margin-top: 8%">
-                Flordi gives the opportunity to meet up in a more relaxed
-                setting while enjoying a fresh, vegan dish, or a local beer.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        v-if="!phone"
-        class="contentColumn CC-2-Fifths"
-        style="display: inline; text-align: right"
-      >
-        <img class="houseImage" src="@/assets/images/house.png" />
-      </div>
-    </div>
   </div>
 </template>
 
@@ -171,6 +106,7 @@ export default Vue.extend({
       windowWidth: 0,
     };
   },
+  methods: {},
   computed: {
     phone() {
       return this.$data.windowWidth < 650;
@@ -187,13 +123,11 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.viewHeight {
-  height: 81vh;
-}
 .chlorisImage {
   margin: auto;
+  margin-top: 10px;
   width: 90%;
-  height: 90%;
+  height: auto;
 }
 
 .CC-1-Third {
@@ -206,7 +140,7 @@ export default Vue.extend({
 }
 
 .spacingRight {
-  margin-top: 2.5%;
+  margin-top: 0.5%;
   padding-right: 5%;
   margin-left: 3%;
 }
@@ -262,5 +196,10 @@ export default Vue.extend({
   margin-left: 1.3%;
   margin-right: 11%;
   padding-top: 3vh;
+}
+
+.marginLeft {
+  margin-left: 10%;
+  padding-top: 6vh;
 }
 </style>

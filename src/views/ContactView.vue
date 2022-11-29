@@ -1,15 +1,12 @@
 <template>
   <div>
     <div class="contentWrapper" :class="{ contentWrapperSmall: phone }">
-      <div class="contentColumn CC-55" v-if="!phone">
-        <img
-          :class="{ chlorisImage: !phone }"
-          src="@/assets/images/chloris2.png"
-        />
+      <div class="contentColumn CC-4 chlorisColumn" v-if="!phone">
+        <img class="chlorisImage" src="@/assets/images/chloris2.png" />
       </div>
       <div
-        class="contentColumn CC-45"
-        :class="{ contentColumnSmall: phone }"
+        class="contentColumn CC-6"
+        :class="{ getInTouch: !phone, contentColumnSmall: phone }"
         style="margin-bottom: 10%; text-align: center"
       >
         <div>
@@ -134,14 +131,24 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.getInTouch {
+  margin-top: 7%;
+}
+
+.chlorisColumn {
+  margin-left: 22%;
+  margin-top: 5%;
+}
+
 .chlorisImage {
   margin-top: 5%;
   margin-left: 7%;
   display: flex;
   justify-self: left;
-  width: 90%;
+  width: 80%;
   height: 100%;
 }
+
 .chlorisImagePhone {
   display: flex;
   margin: auto;
@@ -183,12 +190,12 @@ export default Vue.extend({
   margin-top: 5.5%;
 }
 
-.CC-55 {
-  flex: 0.55;
+.CC-4 {
+  flex: 0.4;
 }
 
-.CC-45 {
-  flex: 0.45;
+.CC-6 {
+  flex: 0.6;
 }
 
 .imageTextBox {

@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="root">
-    <div :class="{ wrapperSmall: phone, wrapper: !phone }">
+    <div :class="{ wrapper: !phone, wrapperSmall: phone }">
       <MenuBar></MenuBar>
       <div class="body">
         <router-view />
