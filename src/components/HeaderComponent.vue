@@ -20,13 +20,13 @@
             >About</router-link
           >
         </v-col>
-        <v-col cols="1" class="menuItem" v-if="!phone">
+        <!-- <v-col cols="1" class="menuItem" v-if="!phone">
           <router-link
             style="text-decoration-line: none; color: black"
             to="/offer"
             >Offer</router-link
           >
-        </v-col>
+        </v-col> -->
         <v-col cols="1" class="menuItem" v-if="!phone">
           <router-link
             style="text-decoration-line: none; color: black"
@@ -58,13 +58,13 @@
               ><p v-on:click="closeMenu">About</p></router-link
             >
           </li>
-          <li>
+          <!-- <li>
             <router-link
               style="text-decoration-line: none; color: black"
               to="/offer"
               ><p v-on:click="closeMenu">Offer</p>
             </router-link>
-          </li>
+          </li> -->
           <li>
             <router-link
               style="text-decoration-line: none; color: black"
@@ -235,7 +235,7 @@ export default Vue.extend({
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   #menu-toggle:checked ~ .menu li {
-    border: 1px solid #ffee99;
+    border: 1px solid rgb(212, 200, 200);
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -247,7 +247,7 @@ export default Vue.extend({
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-color: #fff8d4;
+    background-color: rgb(232, 230, 230);
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;

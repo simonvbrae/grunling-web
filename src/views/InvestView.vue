@@ -119,26 +119,38 @@
                   class="sectionContent"
                   :class="{ contentColumnSmall: phone }"
                 >
-                  Make an appointment with Tom Michels, Make anco-founder and
-                  managing director.
+                  Make an appointment with Tom Michels, co-founder and managing
+                  director.
                 </p>
                 <p
+                  v-if="!phone"
                   class="sectionContent"
                   style="margin-top: 8%"
                   :class="{ contentColumnSmall: phone }"
                 >
                   Tom@grunling.com
                 </p>
+
+                <div
+                  v-if="phone"
+                  class="imageTextBox"
+                  :class="{ 'flex-wrap': narrow }"
+                >
+                  <img
+                    class="tomImagePhone"
+                    src="@/assets/images/tom.png"
+                    style="margin-left: 2.5%"
+                  />
+                  <div>
+                    <p
+                      class="sectionContent"
+                      :class="{ contentColumnSmall: phone }"
+                    >
+                      Tom@grunling.com
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="tomimagePhoneContainer">
-              <img
-                v-if="phone"
-                class="tomImagePhone"
-                :class="{ contentColumnSmall: phone }"
-                style="margin-left: 2.5%"
-                src="@/assets/images/tom.png"
-              />
             </div>
           </div>
         </div>

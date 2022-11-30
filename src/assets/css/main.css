@@ -40,10 +40,12 @@ body {
   height: 100%; 
   background-color: rgb(232, 230, 230);
 }
+
 .contentWrapper {
   display: flex;
   flex-direction: row;
 }
+
 .contentWrapperSmall {
   display: flex;
   flex-direction: column;
