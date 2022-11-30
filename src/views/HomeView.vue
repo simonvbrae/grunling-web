@@ -55,16 +55,28 @@
           <p class="subSlogan">Connecting impact-driven entrepreneurs</p>
           <div class="buttonBox">
             <div class="buttonRow">
-              <v-btn class="text-center box" outlined tile> Co-working </v-btn>
-              <v-btn class="text-center box" outlined tile>
-                Meeting rooms
-              </v-btn>
+              <router-link to="/about" style="text-decoration: none">
+                <v-btn class="text-center box" outlined tile>
+                  Co-working
+                </v-btn></router-link
+              >
+              <router-link to="/about" style="text-decoration: none">
+                <v-btn class="text-center box" outlined tile>
+                  Meeting rooms
+                </v-btn></router-link
+              >
             </div>
             <div class="buttonRow">
-              <v-btn class="text-center box" outlined tile> Offices </v-btn>
-              <v-btn class="text-center box" outlined tile>
-                Commercial spaces
-              </v-btn>
+              <router-link to="/about" style="text-decoration: none">
+                <v-btn class="text-center box" outlined tile>
+                  Offices
+                </v-btn></router-link
+              >
+              <router-link to="/about" style="text-decoration: none">
+                <v-btn class="text-center box" outlined tile>
+                  Commercial spaces
+                </v-btn></router-link
+              >
             </div>
           </div>
         </div>
